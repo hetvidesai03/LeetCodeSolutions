@@ -3,9 +3,9 @@ class Solution:
         
         arr= list(range(1,m+1))
         ans=[]
-        for i in queries:
+        for query in queries:
             
-            ans.append(arr.index(i))
-            arr.insert(0,arr.pop(arr.index(i)))
+            ans.append(arr.index(query))
+            arr.insert(0,arr.pop(arr.index(query)))
         
         return ans
