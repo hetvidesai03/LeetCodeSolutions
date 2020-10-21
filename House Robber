@@ -1,0 +1,10 @@
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        
+        current_total = 0
+        temp1 = 0 
+        for i in range(len(nums)):
+            temp2 = temp1
+            temp1 = max(current_total, temp1)
+            current_total = temp2+nums[i]
+        return max(temp1, current_total)
